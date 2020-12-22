@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website of Angel Barre</title>
+    <link>https://skyoffc.github.io/blog/</link>
+    <description>Recent content on Website of Angel Barre</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Dec 2020 17:35:09 -0500</lastBuildDate>
+    
+	<atom:link href="https://skyoffc.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tryhackme Searchlight</title>
+      <link>https://skyoffc.github.io/blog/post/tryhackme-searchlight/</link>
+      <pubDate>Tue, 22 Dec 2020 17:35:09 -0500</pubDate>
+      
+      <guid>https://skyoffc.github.io/blog/post/tryhackme-searchlight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://skyoffc.github.io/blog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://skyoffc.github.io/blog/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
