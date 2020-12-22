@@ -44,7 +44,8 @@
 <meta name="twitter:image" content="https://skyoffc.github.io/blog/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Tryhackme Searchlight"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="OSINT challenges in the imagery intelligence category
+Note Important, Format flag is : sl{strings}"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -142,12 +143,43 @@
                         <em class="fas fa-calendar-day"></em>
                         <span class="date">Tue, Dec 22, 2020</span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">0-minute read</span>
+                        <span class="reading-time">2-minute read</span>
                     </div>
                 
             </div>
 
-            </div>
+            <p>OSINT challenges in the imagery intelligence category</p>
+<p><strong>Note Important, Format flag is : sl{strings}</strong></p>
+<h4 id="-description"># Description</h4>
+<p>In this room, we will be exploring the discipline of IMINT/GEOINT, which is short for Image intelligence and geospatial intelligence. This room is suited to those of you who are just beginning your OSINT journey or those brand new to the field of IMINT/GEOINT.</p>
+<h4 id="-task-1--welcome-to-the-searchlight-imint-room"># Task 1 : Welcome to the Searchlight IMINT room!.\</h4>
+<p>Question : Did you understand the flag format?</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{ready}
+</code></pre></div><h4 id="-task-2---your-first-challenge"># Task 2 :  Your first challenge!\</h4>
+<p>Question : What is the name of the street where this image was taken?<br>
+Looking closely, on the welcome sign we see the name of the street.</p>
+<p><img src="thm/searchlight/task2_street.jpg" alt=""></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{carnaby street}
+</code></pre></div><h4 id="-task-3--just-google-it"># Task 3 : Just Google it!\</h4>
+<p><img src="thm/searchlight/task3.jpg" alt=""></p>
+<p>There are four questions in this task:</p>
+<pre><code>1. Which city is the tube station located in?
+2. Which tube station do these stairs lead to?
+3. Which year did this station open?
+4. How many platforms are there in this station?\
+</code></pre>
+<p>1 :</p>
+<p>Looking for the image in <code>Google Images</code> or in<code> Yandex</code> we could find the underground train station looking for we found in <a href="https://en.wikipedia.org/wiki/London_Underground">Wikipedia London Undergraund</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{london}
+</code></pre></div><p>2 :</p>
+<p>By zooming in on the sign covered by the staircase, we can see the last three letters of the first word referring to a London circus.We can google with the following dork <code>London Underground Circus</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{Piccadilly circus}
+</code></pre></div><p>3 :</p>
+<p>Based on the search for the previous task in Wikipedia we can easily find the following answers. <a href="https://en.wikipedia.org/wiki/Piccadilly_Circus_tube_station">Wikipedia Poccadilly Circus</a>)</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{1906}
+</code></pre></div><p>4 :</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sl{4}
+</code></pre></div></div>
         <div class="post-footer">
             <div class="info">
                 
