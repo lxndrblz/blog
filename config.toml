@@ -52,7 +52,7 @@ url = "https://t.me/devskynet"
 [[params.socialIcons]]
 icon = "fab fa-github"
 title = "GitHub"
-url = "https://github.com/skyoffc"
+url = "https://github.com/skynetoffc"
 
 [[params.socialIcons]]
 icon = "fas fa-envelope"

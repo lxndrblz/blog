@@ -1,5 +1,5 @@
 +++
-title = "Tryhackme Searchlight"
+title = "Tryhackme Searchlight IMINT"
 description = "A tryhackme machine on osint."
 date = 2020-12-22T17:35:09-05:00
 draft = false
@@ -20,18 +20,18 @@ Question : Did you understand the flag format?
 sl{ready}
 ```
 
-#### # Task 2 :  Your first challenge!\
+#### # Task 2 :  Your first challenge!
 Question : What is the name of the street where this image was taken?\
 Looking closely, on the welcome sign we see the name of the street.
 
-![](thm/searchlight/task2_street.jpg)
+![](https://imgur.com/lT4LJCO.jpg)
 
 ```
 sl{carnaby street}
 ```
 
 #### # Task 3 : Just Google it!\
-![](thm/searchlight/task3.jpg)
+![](https://imgur.com/uLJFxcD.jpg)
 
 There are four questions in this task:
 
@@ -50,7 +50,7 @@ sl{london}
 2 : 
 
 By zooming in on the sign covered by the staircase, we can see the last three letters of the first word referring to a London circus.We can google with the following dork `London Underground Circus`
-
+![](https://i.imgur.com/z3xC1dd.png)
 ```
 sl{Piccadilly circus}
 ```
@@ -58,7 +58,7 @@ sl{Piccadilly circus}
 3 :
 
 Based on the search for the previous task in Wikipedia we can easily find the following answers. [Wikipedia Poccadilly Circus](https://en.wikipedia.org/wiki/Piccadilly_Circus_tube_station))
-
+![](https://i.imgur.com/dsiV2zk.png)
 ```
 sl{1906}
 ```
@@ -68,3 +68,18 @@ sl{1906}
 ```
 sl{4}
 ```
+#### # Task 4 : Keep at it!
+This challenge is a bit harder then the previous one mainly because there is less information to see, but I can still see people sitti$
+There is also a big banner with something that looks like a website on the bottom right corner - YVR.CA.
+Going to that website we are welcomed into Vancouver international airport which is the building we're looking for.
+
+![](https://i.imgur.com/Z7wyiKl.jpg)
+
+There are four questions in this task:
+
+	1. Which building is this photo taken in?
+	2. Which country is this building located in?
+	3. Which city is this building located in?
+1 : 
+
+`Continue..`
